@@ -29,21 +29,30 @@ display the state of user defined variables on the hud (repositionable)
     - the user can change the value at any time by using the same command with a different value
   - sm_stateset pov {empty}
     - hides the pov text (shows a space)
-  
-  turnbind example:
+
+yawspeed example:
   ```
-  // state display
+  alias text_yaw80     "sm_stateset yaw 80"
+  alias text_yaw120    "sm_stateset yaw 120"
+  alias "toggleyaw"    "yawspeed_120"
+  alias "yawspeed_80"  "cl_yawspeed 80; alias toggleyaw yawspeed_120; text_yaw80"
+  alias "yawspeed_120" "cl_yawspeed 120; alias toggleyaw yawspeed_80; text_yaw120"
+  bind  "mouse3"       "toggleyaw"
+  ```
+turnbind example:
+  ```
   alias "text_turnbinds" "sm_stateset binds turnbinds"
   alias "text_flashes"   "sm_stateset binds flashes"
-
-  // turnbind aliases
   alias "togglespin" "spin_on"
-  alias "spin_on"  "bind mouse1 +left;   bind mouse2 +right; -attack; -attack2; alias togglespin spin_off; text_turnbinds"
-  alias "spin_off" "bind mouse1 +attack; bind mouse2 +attack2; -left; -right;   alias togglespin spin_on;  text_flashes"
+  alias "spin_on"    "bind mouse1 +left;   bind mouse2 +right; -attack; -attack2; alias togglespin spin_off; text_turnbinds"
+  alias "spin_off"   "bind mouse1 +attack; bind mouse2 +attack2; -left; -right;   alias togglespin spin_on;  text_flashes"
+  bind  "mouse5"     "togglespin"
   ```
-  +pov example:
++pov example:
   ```
   alias "+pov_text" "+pov; sm_stateset pov teammate" // shows teammate text
   alias "-pov_text" "-pov; sm_stateset pov {empty}" // shows no text
+  bind  "c"         "+pov_text"
   ```
+
 
