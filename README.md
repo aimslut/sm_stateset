@@ -11,17 +11,17 @@ display the state of user defined variables on the hud (repositionable)
   - chat trigger !states to open menu
   - menu-based management system
 ### commands:
-| **Command**                        | **Description**                                                                                                                           |         |                         |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------- |
-| `sm_stateset <variable> <value>`   | Registers the variable if it doesn't already exist; sets the value for the variable; use `{empty}` as value to hide text (shows a space). |         |                         |
-| `sm_state_menu`                    | Opens the variable management menu.                                                                                                       |         |                         |
-| `sm_state_remove <variable>`       | Removes a variable.                                                                                                                       |         |                         |
-| `sm_state_enable <variable>`       | Enables/shows a variable.                                                                                                                 |         |                         |
-| `sm_state_disable <variable>`      | Disables/hides a variable.                                                                                                                |         |                         |
-| `sm_state_move <variable> <x> <y>` | Moves a variable to specific coordinates.                                                                                                 |         |                         |
+| **Command**                        | **Description**                                                                                                                           |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `sm_stateset <variable> <value>`   | Registers the variable if it doesn't already exist; sets the value for the variable; use `{empty}` as value to hide text (shows a space). |
+| `sm_state_menu`                    | Opens the variable management menu.                                                                                                       |
+| `sm_state_remove <variable>`       | Removes a variable.                                                                                                                       |
+| `sm_state_enable <variable>`       | Enables/shows a variable.                                                                                                                 |
+| `sm_state_disable <variable>`      | Disables/hides a variable.                                                                                                                |
+| `sm_state_move <variable> <x> <y>` | Moves a variable to specific coordinates.                                                                                                 |
 | `sm_state_align <variable> <left/center/right>` | Changes text alignment. |
-| `sm_state_position <variable>`     | Outputs the current position as an `sm_state_move` command.                                                                               |         |                         |
-| `!states` *(chat command)*         | Opens the variable management menu.                                                                                                       |         |                         |
+| `sm_state_position <variable>`     | Outputs the current position as an `sm_state_move` command.                                                                               |
+| `!states` *(chat command)*         | Opens the variable management menu.                                                                                                       |
 
 ### examples:
   - sm_stateset yawspeed 80
@@ -46,3 +46,4 @@ display the state of user defined variables on the hud (repositionable)
   alias "+pov_text" "+pov; sm_stateset pov teammate" // shows teammate text
   alias "-pov_text" "-pov; sm_stateset pov {empty}" // shows no text
   ```
+
