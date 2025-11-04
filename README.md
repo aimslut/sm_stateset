@@ -43,10 +43,10 @@ turnbind example:
   ```
   alias "text_turnbinds" "sm_stateset binds turnbinds"
   alias "text_flashes"   "sm_stateset binds flashes"
-  alias "togglespin" "spin_on"
-  alias "spin_on"    "bind mouse1 +left;   bind mouse2 +right; -attack; -attack2; alias togglespin spin_off; text_turnbinds"
-  alias "spin_off"   "bind mouse1 +attack; bind mouse2 +attack2; -left; -right;   alias togglespin spin_on;  text_flashes"
-  bind  "mouse5"     "togglespin"
+  alias "togglespin"     "spin_on"
+  alias "spin_on"        "bind mouse1 +left;   bind mouse2 +right; -attack; -attack2; alias togglespin spin_off; text_turnbinds"
+  alias "spin_off"       "bind mouse1 +attack; bind mouse2 +attack2; -left; -right;   alias togglespin spin_on;  text_flashes"
+  bind  "mouse5"         "togglespin"
   ```
 +pov example:
   ```
@@ -54,5 +54,6 @@ turnbind example:
   alias "-pov_text" "-pov; sm_stateset pov {empty}" // shows no text
   bind  "c"         "+pov_text"
   ```
+
 
 
